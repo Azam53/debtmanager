@@ -1,0 +1,23 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+class Agent extends CI_Controller {
+
+	
+	public function index()
+	{
+                echo siteurl();
+                exit;
+		$this->load->view('request');
+	}
+
+        public function search()
+        {
+             $search_term = $this->input->post('search_term');
+             $this->db->where('question', $search_term);
+             $data['result'] = $this->db->get('info');
+             $this->load->view('result',$data);
+
+              
+        }
+}

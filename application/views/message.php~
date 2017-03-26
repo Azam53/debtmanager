@@ -1,0 +1,10 @@
+<?php
+echo $azam."\n";
+ foreach($result as $value)
+ {
+   echo $value['question']."\n";
+ }
+echo "<pre>";
+print_r($result);
+echo "</pre>";
+?>

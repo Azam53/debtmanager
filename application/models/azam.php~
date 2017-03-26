@@ -1,0 +1,12 @@
+<?php
+class Azam extends CI_Model
+        public function __construct()
+        {
+                $this->load->database();
+        }
+
+       public data_service()
+       {
+                        $data['result'] = $this->db->query('SELECT * FROM info')->result_array();
+       }
+}
